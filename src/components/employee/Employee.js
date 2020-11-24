@@ -1,9 +1,10 @@
 import React from "react"
 import "./Employee.css"
 
-export const Employee = () => (
+export const Employee = ({employee}) => (
     <section className="employee">
-        <h3 className="employee__name">Jake</h3>
-        <div className="employee__breed">The Boss</div>
+        <h3 className="employee__name">{employee.name}</h3>
+        <div className="employee__id">Employee ID:{employee.locationId}</div>
     </section>
 )
+
