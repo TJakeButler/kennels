@@ -11,34 +11,14 @@ import { EmployeeProvider } from "./employee/EmployeeProvider"
 
 export const ApplicationViews = (props) => {
     return (
-        <>
-            <LocationProvider>
-                {/* Render the location list when http://localhost:3000/ */}
-                <Route exact path="/">
-                    <LocationList />
-                </Route>
-            </LocationProvider>
-
-            <AnimalProvider>
-                {/* Render the animal list when http://localhost:3000/animals */}
-                <Route path="/animals">
+        <AnimalProvider>
+        <LocationProvider>
+            <CustomerProvider>
+                <Route exact path="/animals">
                     <AnimalList />
                 </Route>
-            </AnimalProvider>
-
-            <CustomerProvider>
-                {/* Render the customer list when http://localhost:3000/customers */}
-                <Route path="/customers">
-                    <CustomerList />
-                </Route>
             </CustomerProvider>
-
-            <EmployeeProvider>
-                {/* Render the animal list when http://localhost:3000/employees */}
-                <Route path="/employees">
-                    <EmployeeList />
-                </Route>
-            </EmployeeProvider>
-        </>
+        </LocationProvider>
+    </AnimalProvider>
     )
 }
