@@ -34,8 +34,8 @@ export const ApplicationViews = (props) => {
         </AnimalProvider>
 
         <AnimalProvider>
-                <LocationProvider>
-            <EmployeeProvider>
+            <LocationProvider>
+                <EmployeeProvider>
                     <Route exact path="/employees" render={
                         props => <EmployeeList {...props} />
                     } />
@@ -43,8 +43,8 @@ export const ApplicationViews = (props) => {
                     <Route exact path="/employees/create" render={
                         props => <EmployeeForm {...props} />
                     } />
-            </EmployeeProvider>
-                </LocationProvider>
+                </EmployeeProvider>
+            </LocationProvider>
         </AnimalProvider>
 
 
