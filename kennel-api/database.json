@@ -9,34 +9,24 @@
     },
     {
       "id": 2,
-      "name": "Bubbles",
-      "breed": "Pug",
+      "name": "Snuggles",
+      "breed": "Pit Bull",
       "customerId": 2,
       "locationId": 1
-    },
-    {
-      "id": 3,
-      "name": "Frank",
-      "breed": "Golden",
-      "customerId": 3,
-      "locationId": 2
     }
   ],
   "customers": [
     {
-      "id": 1,
-      "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct"
+      "email": "jake@jake.com",
+      "password": "pw",
+      "name": "Jake B",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Bubba Gump",
-      "address": "440 W Main"
-    },
-    {
-      "id": 3,
-      "name": "Bernie Sanders",
-      "address": "119 NW Ave"
+      "email": "Bill@Billy.com",
+      "password": "pw",
+      "name": "Billy Ray",
+      "id": 2
     }
   ],
   "employees": [
