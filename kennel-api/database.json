@@ -1,58 +1,77 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "customerId": 1,
-      "locationId": 2
+      "name": "boots",
+      "locationId": 2,
+      "customer": "jake b.",
+      "customerId": 2,
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Snuggles",
-      "breed": "Pit Bull",
+      "name": "sparky",
+      "locationId": 2,
+      "customer": "david",
       "customerId": 2,
-      "locationId": 1
+      "id": 2
+    },
+    {
+      "name": "sparky",
+      "locationId": 2,
+      "customer": "Jake",
+      "customerId": 2,
+      "id": 3
+    },
+    {
+      "name": "Boots",
+      "locationId": 1,
+      "customerId": 2,
+      "id": 4
     }
   ],
   "customers": [
     {
-      "email": "jake@jake.com",
+      "email": "jake@gmail.com",
       "password": "pw",
       "name": "Jake B",
       "id": 1
     },
     {
-      "email": "Bill@Billy.com",
+      "email": "Randy@gmail.com",
       "password": "pw",
-      "name": "Billy Ray",
+      "name": "Randy  Travis",
       "id": 2
     }
   ],
   "employees": [
     {
-      "name": "Jake",
-      "locationId": 2,
-      "animalId": 1,
+      "name": "david",
+      "locationId": 1,
+      "animalId": 3,
       "id": 1
     },
     {
-      "name": "David B",
+      "name": "scott",
       "locationId": 1,
       "animalId": 2,
       "id": 2
     },
     {
-      "name": "Joe Biden",
-      "locationId": 1,
-      "animalId": 3,
+      "name": "tom",
+      "locationId": 2,
+      "animalId": 2,
       "id": 3
     },
     {
-      "name": "Bubba",
+      "name": "Jake",
       "locationId": 1,
-      "animalId": 1,
+      "animalId": 4,
       "id": 4
+    },
+    {
+      "name": "Bubba Gump",
+      "locationId": 2,
+      "animalId": 1,
+      "id": 5
     }
   ],
   "locations": [
