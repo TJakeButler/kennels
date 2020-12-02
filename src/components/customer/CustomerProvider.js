@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 /*
     The context is imported and used by individual components
@@ -10,37 +10,35 @@ export const CustomerContext = React.createContext()
  This component establishes what data can be used.
  */
 export const CustomerProvider = (props) => {
-    const [customers, setCustomers] = useState([])
 
-    const getCustomers = () => {
-        return fetch("http://localhost:8088/customers")
-            .then(res => res.json())
-            .then(setCustomers)
-    }
+  const [customers, setCustomers] = useState([]) 
+  // useState returns [initial value of state variable, a function to set the value of the state variable]
 
-    const addCustomer = customer => {
-        return fetch("http://localhost:8088/customers", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(customer)
-        })
-            .then(getCustomers)
-    }
+  const getCustomers = () => {
+    return fetch("http://localhost:8088/customers")
+      .then(res => res.json())
+      .then(setCustomers)
+      // .then(parsedCustomers => setCustomers(parsedCustomers))
+  }
 
-    /*
-        You return a context provider which has the
-        `customers` state, the `addCustomers` function,
-        and the `getCustomers` function as keys. This
-        allows any child elements to access them.
-    */
-    return (
-        <CustomerContext.Provider value={{
-            customers, addCustomer, getCustomers
-        }}>
-            {props.children}
-        </CustomerContext.Provider>
-    )
+  const addCustomer = customer => {
+    return fetch("http://localhost:8088/customers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(customer)
+    })
+      .then(getCustomers)
+  }
+
+  return (
+    <CustomerContext.Provider value={
+      {
+      customers, addCustomer, getCustomers
+      }
+    }>
+      {props.children}
+    </CustomerContext.Provider>
+  )
 }
-
